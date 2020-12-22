@@ -10,9 +10,9 @@ WORKDIR /src
 COPY ["WebApplication13/WebApplication13.csproj", "WebApplication13/"]
 COPY ["NuGet.config", ""]
 ARG HANGFIRE_LOGIN
-ARG HANGFIRE_LOGIN
+ARG HANGFIRE_PASSWORD
 ENV HANGFIRE_LOGIN=$HANGFIRE_LOGIN
-ENV HANGFIRE_PASSWORD=$HANGFIRE_LOGIN
+ENV HANGFIRE_PASSWORD=$HANGFIRE_PASSWORD
 RUN dotnet restore "WebApplication13/WebApplication13.csproj"
 COPY . .
 WORKDIR "/src/WebApplication13"
